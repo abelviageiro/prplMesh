@@ -1,6 +1,6 @@
 if(BUILD_TESTS)
     add_executable(tlvf_test main.cpp)
-    target_link_libraries(tlvf_test mapf::elpp common tlvf common)
+    target_link_libraries(tlvf_test mapf::elpp tlvf common)
     install(TARGETS tlvf_test DESTINATION bin/tests)
     add_test(NAME tlvf_test COMMAND $<TARGET_FILE:tlvf_test>)
 endif()
