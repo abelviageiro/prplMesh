@@ -48,17 +48,17 @@ public:
      * @return true if successful, false if not.
      */
     bool compute_key(uint8_t *key, unsigned &key_length, const uint8_t *remote_pubkey,
-                     unsigned remote_pubkey_length);
+                     unsigned remote_pubkey_length) const;
 
     /**
      * @brief Get the public key
      */
-    const uint8_t *pubkey() { return m_pubkey; }
+    const uint8_t *pubkey() const { return m_pubkey; }
 
     /**
      * @brief Get the length of pubkey().
      */
-    unsigned pubkey_length() { return m_pubkey_length; }
+    unsigned pubkey_length() const { return m_pubkey_length; }
 
 private:
     /**
